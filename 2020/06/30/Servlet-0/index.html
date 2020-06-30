@@ -13,7 +13,7 @@
 <meta property="og:description" content="Servlet概述Servlet其实就是Java的一个接口，该接口只有五个方法。 12345init(ServletConfig config);		&#x2F;&#x2F;初始化getServletConfig();		&#x2F;&#x2F;获得配置service(ServletRequest req,ServletResponse res);	&#x2F;&#x2F;服务public Str">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-30T01:02:08.000Z">
-<meta property="article:modified_time" content="2020-06-30T01:13:59.336Z">
+<meta property="article:modified_time" content="2020-06-30T01:16:08.559Z">
 <meta property="article:author" content="yzhengy">
 <meta property="article:tag" content="JavaWeb">
 <meta name="twitter:card" content="summary">
@@ -244,7 +244,9 @@
 <p>由于service()方法实现复杂，寻找一个已经实现该方法的类，GenericServlet抽象类没有实现该方法，它的子类HttpServlet实现了service方法。HttpServlet虽然在service中帮我们写了请求方式的判断，但是针对每一种请求，业务逻辑代码不同，HttpServlet无法得知子类想法。所以抽出七个方法，提供了默认实现：报405，400错误，提示请求不支持。这种实现很鸡肋，所以不能让它实例化，子类必须至少重写七个doXXX()中的一个，用来处理特定的请求。</p>
 <p>HttpServlet此处使用了模板方法模式，父类把能写的逻辑都写完，把不确定的业务代码抽成一个方法，调用它。当子类重写该方法，整个业务代码就可以使用了。</p>
 <p><strong>一个类声明成抽象方法，一般有两个原因</strong>：1.有抽象方法  2.没有抽象方法，但不希望被实例化。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 1.jpg %&#125;</span><br><span class="line">&#123;% asset_img 2.jpg %&#125;</span><br><span class="line">&#123;% asset_img 3.jpg %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 
 <h3 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h3><p>（1）加载和实例化</p>
 <p>当Servlet容器启动或客户端发送一个请求时，Servlet容器会查找内存中是否存在该Servlet实例，若存在，则直接读取该实例响应请求；如果不存在，就创建一个Servlet实例。</p>
@@ -312,7 +314,7 @@
         <p><span>本文标题:</span><a href="/2020/06/30/Servlet-0/">Servlet</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 yzhengy 的个人博客">yzhengy</a></p>
         <p><span>发布时间:</span>2020年06月30日 - 09时02分</p>
-        <p><span>最后更新:</span>2020年06月30日 - 09时13分</p>
+        <p><span>最后更新:</span>2020年06月30日 - 09时16分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/06/30/Servlet-0/" title="Servlet">http://yoursite.com/2020/06/30/Servlet-0/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/06/30/Servlet-0/　　作者: yzhengy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
