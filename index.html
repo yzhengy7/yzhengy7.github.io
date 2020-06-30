@@ -200,11 +200,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Servlet-0" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Servlet" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2020/06/30/Servlet-0/" class="article-date">
-      <time datetime="2020-06-30T01:02:08.000Z" itemprop="datePublished">2020-06-30</time>
+      <a href="/2020/06/30/Servlet/" class="article-date">
+      <time datetime="2020-06-30T03:46:14.000Z" itemprop="datePublished">2020-06-30</time>
 </a>
     </div>
   
@@ -217,7 +217,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/30/Servlet-0/">Servlet</a>
+      <a class="article-title" href="/2020/06/30/Servlet/">Servlet</a>
     </h1>
   
 
@@ -235,8 +235,9 @@
 <p>由于service()方法实现复杂，寻找一个已经实现该方法的类，GenericServlet抽象类没有实现该方法，它的子类HttpServlet实现了service方法。HttpServlet虽然在service中帮我们写了请求方式的判断，但是针对每一种请求，业务逻辑代码不同，HttpServlet无法得知子类想法。所以抽出七个方法，提供了默认实现：报405，400错误，提示请求不支持。这种实现很鸡肋，所以不能让它实例化，子类必须至少重写七个doXXX()中的一个，用来处理特定的请求。</p>
 <p>HttpServlet此处使用了模板方法模式，父类把能写的逻辑都写完，把不确定的业务代码抽成一个方法，调用它。当子类重写该方法，整个业务代码就可以使用了。</p>
 <p><strong>一个类声明成抽象方法，一般有两个原因</strong>：1.有抽象方法  2.没有抽象方法，但不希望被实例化。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![示例](.&#x2F;Servlet-0&#x2F;1.png)</span><br><span class="line">![示例](.&#x2F;Servlet-0&#x2F;2.png)</span><br><span class="line">![示例](.&#x2F;Servlet-0&#x2F;3.png)</span><br></pre></td></tr></table></figure>
-
+<p> <strong></strong> </p>
+<p> <strong></strong> </p>
+<p> <strong></strong> </p>
 <h3 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h3><p>（1）加载和实例化</p>
 <p>当Servlet容器启动或客户端发送一个请求时，Servlet容器会查找内存中是否存在该Servlet实例，若存在，则直接读取该实例响应请求；如果不存在，就创建一个Servlet实例。</p>
 <p>（2） 初始化【init方法只会在servlet创建时执行一次】</p>
